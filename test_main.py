@@ -7,6 +7,6 @@ def test_MED():
 def test_align():
     for i in range(len(test_cases)):
         S, T = test_cases[i]
-        align_S, align_T = fast_align_MED(S, T)
-        assert (align_S == alignments[i][0] and align_T == alignments[i][1])
+        dist, S_aligned, T_aligned = fast_align_MED(S, T)
+        assert (S_aligned == alignments[i][0] and T_aligned == alignments[i][1])
 
